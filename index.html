@@ -8,6 +8,23 @@
 		<script type="text/javascript" src="js/easyui/locale/easyui-lang-zh_CN.js"></script>
 		<link rel="stylesheet" href="js/easyui/themes/default/easyui.css" />
 		<link rel="stylesheet" href="js/easyui/themes/icon.css" />
+		<script type="text/javascript">
+			$(function(){
+				$("#content3").click(function(){
+					$('#tt').tabs('add',{
+					    title:'New Tab',
+					    content:'Tab Body',
+					    closable:true,
+					    tools:[{
+							iconCls:'icon-mini-refresh',
+							handler:function(){
+								alert('refresh');
+							}
+					    }]
+					});
+				})
+			})
+		</script>
 	</head>
 	<body class="easyui-layout">
 		<div data-options="region:'north',title:'North Title',split:true" style="height:100px;">北部区域</div>
@@ -22,11 +39,23 @@
 					content2
 				</div>
 				<div title="Title3">
-					content3
+					<a href="javascript:void(0)" id="content3">content3</a>
 				</div>
 			</div>
 		</div>
-		<div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;">中部区域</div>
+		<div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;">中部区域
+			<div id="tt" data-options="fit:true" id="tt" class="easyui-tabs" style="width:500px;height:250px;">
+				<div title="Tab1" style="padding:20px;display:none;">
+					tab1
+				</div>
+				<div title="Tab2" data-options="closable:true" style="overflow:auto;padding:20px;display:none;">
+					tab2
+				</div>
+				<div title="Tab3" data-options="iconCls:'icon-reload',closable:true" style="padding:20px;display:none;">
+					tab3
+				</div>
+			</div>
+		</div>
 		<div data-options="region:'east',title:'East',split:true" style="width:100px;">东部区域</div>
 		<div data-options="region:'south',title:'South Title',split:true" style="height:100px;">南部区域</div>
 	</body>
