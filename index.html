@@ -8,19 +8,21 @@
 		<script type="text/javascript" src="js/easyui/locale/easyui-lang-zh_CN.js"></script>
 		<link rel="stylesheet" href="js/easyui/themes/default/easyui.css" />
 		<link rel="stylesheet" href="js/easyui/themes/icon.css" />
+		<script src="js/ztree/jquery.ztree.all.js"></script>
+		<link rel="stylesheet" type="text/css" href="js/ztree/zTreeStyle.css"
 		<script type="text/javascript">
-			$(function(){
-				$("#content3").click(function(){
-					$('#tt').tabs('add',{
-					    title:'New Tab',
-					    content:'Tab Body',
-					    closable:true,
-					    tools:[{
-							iconCls:'icon-mini-refresh',
-							handler:function(){
+			$(function() {
+				$("#content3").click(function() {
+					$('#tt').tabs('add', {
+						title: 'New Tab',
+						content: 'Tab Body',
+						closable: true,
+						tools: [{
+							iconCls: 'icon-mini-refresh',
+							handler: function() {
 								alert('refresh');
 							}
-					    }]
+						}]
 					});
 				})
 			})
