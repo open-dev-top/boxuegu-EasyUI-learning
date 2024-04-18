@@ -2,9 +2,18 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>layout 布局页面</title>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/easyui/jquery.easyui.min.js"></script>
+		<script type="text/javascript" src="js/easyui/locale/easyui-lang-zh_CN.js"></script>
+		<link rel="stylesheet" href="js/easyui/themes/default/easyui.css" />
+		<link rel="stylesheet" href="js/easyui/themes/icon.css" />
 	</head>
-	<body>
-		
+	<body class="easyui-layout">
+		<div data-options="region:'north',title:'North Title',split:true" style="height:100px;">北部区域</div>
+		<div data-options="region:'west',title:'West',split:true" style="width:100px;">西部区域</div>
+		<div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;">中部区域</div>
+		<div data-options="region:'east',title:'East',split:true" style="width:100px;">东部区域</div>
+		<div data-options="region:'south',title:'South Title',split:true" style="height:100px;">南部区域</div>
 	</body>
 </html>
